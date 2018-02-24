@@ -1,0 +1,412 @@
+/* ==========================================================================
+   Import helpers
+   ========================================================================== */
+/* ==========================================================================
+   Mixins
+   ========================================================================== */
+/* ===========================
+   Flexbox mixins
+   =========================== */
+/* ==========================================================================
+   Import base classes
+   ========================================================================== */
+/*! HTML5 Boilerplate v6.0.1 | MIT License | https://html5boilerplate.com/ */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+/* line 13, ../sass/_base.scss */
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4; }
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Vendor-prefixed and regular ::selection selectors cannot be combined:
+ * https://stackoverflow.com/a/16982510/7133471
+ *
+ * Customize the background color to match your design.
+ */
+/* line 29, ../sass/_base.scss */
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none; }
+
+/* line 34, ../sass/_base.scss */
+::selection {
+  background: #b3d4fc;
+  text-shadow: none; }
+
+/*
+ * A better looking default horizontal rule
+ */
+/* line 43, ../sass/_base.scss */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0; }
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+/* line 58, ../sass/_base.scss */
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle; }
+
+/*
+ * Remove default fieldset styles.
+ */
+/* line 71, ../sass/_base.scss */
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0; }
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+/* line 81, ../sass/_base.scss */
+textarea {
+  resize: vertical; }
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+/* line 89, ../sass/_base.scss */
+.browserupgrade {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0; }
+
+/* ==========================================================================
+   Custom Base Styles
+   ========================================================================== */
+/* line 99, ../sass/_base.scss */
+html,
+body {
+  font-family: "Times New Roman", Georgia, serif; }
+
+/* line 104, ../sass/_base.scss */
+.container {
+  width: 1200px;
+  margin: 0 auto; }
+
+/* line 109, ../sass/_base.scss */
+img {
+  max-width: 100%; }
+
+/* ==========================================================================
+   Import partials
+   ========================================================================== */
+/* ==========================================================================
+   Main Navigation Section
+   ========================================================================== */
+/* line 4, ../sass/partials/_navigation.scss */
+.main-navigation {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-direction: normal;
+  -webkit-box-orient: horizontal;
+  -moz-box-direction: normal;
+  -moz-box-orient: horizontal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  -ms-flex-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  padding: 0.5em 20px; }
+  /* line 10, ../sass/partials/_navigation.scss */
+  .main-navigation a {
+    font-size: 16px;
+    line-height: 16px;
+    color: #000000;
+    text-decoration: none;
+    font-weight: normal;
+    letter-spacing: 0.15em;
+    display: block;
+    padding: 0.8em 1em;
+    border-bottom: 2px solid transparent; }
+    /* line 21, ../sass/partials/_navigation.scss */
+    .main-navigation a:hover {
+      border-bottom: 2px solid lightskyblue; }
+
+/* line 28, ../sass/partials/_navigation.scss */
+.logo {
+  margin-right: auto; }
+  /* line 30, ../sass/partials/_navigation.scss */
+  .logo h1 {
+    margin: 0; }
+
+/* line 35, ../sass/partials/_navigation.scss */
+.menu {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex: 1;
+  flex-grow: 1; }
+  /* line 37, ../sass/partials/_navigation.scss */
+  .menu nav {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+    -moz-box-pack: end;
+    -ms-flex-pack: end;
+    -webkit-justify-content: flex-end;
+    justify-content: flex-end; }
+  /* line 42, ../sass/partials/_navigation.scss */
+  .menu a {
+    text-transform: capitalize; }
+
+/* ==========================================================================
+   Hero Image Section
+   ========================================================================== */
+/* line 4, ../sass/partials/_hero-img.scss */
+.hero-img {
+  height: 800px;
+  overflow: hidden;
+  position: relative; }
+  /* line 9, ../sass/partials/_hero-img.scss */
+  .hero-img img {
+    width: 100%;
+    height: auto; }
+  /* line 14, ../sass/partials/_hero-img.scss */
+  .hero-img .caption {
+    position: absolute;
+    bottom: 0;
+    left: 0; }
+    /* line 19, ../sass/partials/_hero-img.scss */
+    .hero-img .caption h3 {
+      font-size: 35px;
+      line-height: 35px;
+      letter-spacing: 3px;
+      font-weight: normal;
+      word-spacing: 3px; }
+
+/* ==========================================================================
+   About Section
+   ========================================================================== */
+/* line 4, ../sass/partials/_about.scss */
+.section {
+  padding: 5em 0 3em;
+  border-bottom: 1px solid gray;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-direction: normal;
+  -webkit-box-orient: horizontal;
+  -moz-box-direction: normal;
+  -moz-box-orient: horizontal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  -ms-flex-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between; }
+
+/* line 15, ../sass/partials/_about.scss */
+section:last-child > .section {
+  border: none; }
+
+/* ==========================================================================
+   Import helper classes
+   ========================================================================== */
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+/*
+ * Hide visually and from screen readers
+ */
+/* line 9, ../sass/_helper-classes.scss */
+.hidden {
+  display: none !important; }
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+/* line 22, ../sass/_helper-classes.scss */
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
+  /* 1 */ }
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+/* line 42, ../sass/_helper-classes.scss */
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  -webkit-clip-path: none;
+  clip-path: none;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+  white-space: inherit; }
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+/* line 59, ../sass/_helper-classes.scss */
+.invisible {
+  visibility: hidden; }
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+/* line 75, ../sass/_helper-classes.scss */
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */ }
+
+/* line 81, ../sass/_helper-classes.scss */
+.clearfix:after {
+  clear: both; }
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */ }
+@media print, (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 1.25dppx), (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */ }
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   http://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+@media print {
+  /* line 109, ../sass/_helper-classes.scss */
+  *,
+  *:before,
+  *:after {
+    background: transparent !important;
+    color: #000 !important;
+    /* Black prints faster:
+       http://www.sanbeiji.com/archives/953 */
+    box-shadow: none !important;
+    text-shadow: none !important; }
+
+  /* line 119, ../sass/_helper-classes.scss */
+  a,
+  a:visited {
+    text-decoration: underline; }
+
+  /* line 124, ../sass/_helper-classes.scss */
+  a[href]:after {
+    content: " (" attr(href) ")"; }
+
+  /* line 128, ../sass/_helper-classes.scss */
+  abbr[title]:after {
+    content: " (" attr(title) ")"; }
+
+  /*
+   * Don't show links that are fragment identifiers,
+   * or use the `javascript:` pseudo protocol
+   */
+  /* line 137, ../sass/_helper-classes.scss */
+  a[href^="#"]:after,
+  a[href^="javascript:"]:after {
+    content: ""; }
+
+  /* line 142, ../sass/_helper-classes.scss */
+  pre {
+    white-space: pre-wrap !important; }
+
+  /* line 145, ../sass/_helper-classes.scss */
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid; }
+
+  /*
+   * Printing Tables:
+   * http://css-discuss.incutio.com/wiki/Printing_Tables
+   */
+  /* line 156, ../sass/_helper-classes.scss */
+  thead {
+    display: table-header-group; }
+
+  /* line 160, ../sass/_helper-classes.scss */
+  tr,
+  img {
+    page-break-inside: avoid; }
+
+  /* line 165, ../sass/_helper-classes.scss */
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3; }
+
+  /* line 172, ../sass/_helper-classes.scss */
+  h2,
+  h3 {
+    page-break-after: avoid; } }

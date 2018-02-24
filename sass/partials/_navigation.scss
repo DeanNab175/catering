@@ -1,0 +1,45 @@
+/* ==========================================================================
+   Main Navigation Section
+   ========================================================================== */
+.main-navigation {
+	@include flexbox;
+	@include flex-direction;
+	@include flex-wrap(wrap);
+	@include justify-content(space-between);
+	padding: 0.5em 20px;
+	a {
+		font-size: 16px;
+		line-height: 16px;
+		color: $black;
+		text-decoration: none;
+		font-weight: normal;
+		letter-spacing: 0.15em;
+		display: block;
+		padding: 0.8em 1em;
+		border-bottom: 2px solid transparent;
+
+		&:hover {
+			//background-color: crimson;
+			border-bottom: 2px solid lightskyblue;
+		}
+	}
+}
+
+.logo {
+	margin-right: auto;
+	h1 {
+		margin: 0;
+	}
+}
+
+.menu {
+	@include flex-grow;
+	nav {
+		@include flexbox;
+		@include justify-content(flex-end);
+	}
+
+	a {
+		text-transform: capitalize;
+	}
+}

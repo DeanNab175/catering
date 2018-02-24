@@ -1,0 +1,28 @@
+/* ==========================================================================
+   Hero Image Section
+   ========================================================================== */
+.hero-img {
+	height: 800px;
+	overflow: hidden;
+	position: relative;
+
+	img {
+		width: 100%;
+		height: auto;
+	}
+
+	.caption {
+	  position: absolute;
+	  bottom: 0;
+	  left: 0;
+
+	  h3 {
+	  	font-size: 35px;
+		line-height: 35px;
+		letter-spacing: 3px;
+		font-weight: normal;
+		word-spacing: 3px;
+	  }
+
+	}
+}
