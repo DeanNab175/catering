@@ -121,28 +121,14 @@ img {
    ========================================================================== */
 /* line 4, ../sass/partials/_navigation.scss */
 .main-navigation {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-direction: normal;
-  -webkit-box-orient: horizontal;
-  -moz-box-direction: normal;
-  -moz-box-orient: horizontal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-pack: justify;
-  -moz-box-pack: justify;
-  -ms-flex-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
+  flex-direction: column;
   padding: 0.5em 20px; }
-  /* line 10, ../sass/partials/_navigation.scss */
+  @media (min-width: 1025px) {
+    /* line 4, ../sass/partials/_navigation.scss */
+    .main-navigation {
+      flex-direction: row; } }
+  /* line 17, ../sass/partials/_navigation.scss */
   .main-navigation a {
     font-size: 16px;
     line-height: 16px;
@@ -150,49 +136,61 @@ img {
     text-decoration: none;
     font-weight: normal;
     letter-spacing: 0.15em;
-    display: block;
     padding: 0.8em 1em;
-    border-bottom: 2px solid transparent; }
-    /* line 21, ../sass/partials/_navigation.scss */
+    border-bottom: 2px solid transparent;
+    display: block; }
+    /* line 28, ../sass/partials/_navigation.scss */
     .main-navigation a:hover {
       border-bottom: 2px solid lightskyblue; }
 
-/* line 28, ../sass/partials/_navigation.scss */
+/* line 35, ../sass/partials/_navigation.scss */
 .logo {
-  margin-right: auto; }
-  /* line 30, ../sass/partials/_navigation.scss */
+  align-self: center; }
+  @media (min-width: 1025px) {
+    /* line 35, ../sass/partials/_navigation.scss */
+    .logo {
+      margin-right: auto; } }
+  /* line 41, ../sass/partials/_navigation.scss */
   .logo h1 {
     margin: 0; }
 
-/* line 35, ../sass/partials/_navigation.scss */
+/* line 46, ../sass/partials/_navigation.scss */
 .menu {
-  -webkit-box-flex: 1;
-  -moz-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex: 1;
-  flex-grow: 1; }
-  /* line 37, ../sass/partials/_navigation.scss */
+  align-self: center; }
+  /* line 49, ../sass/partials/_navigation.scss */
   .menu nav {
-    display: -webkit-box;
-    display: -moz-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
+    text-align: center;
     display: flex;
-    -webkit-box-pack: end;
-    -moz-box-pack: end;
-    -ms-flex-pack: end;
-    -webkit-justify-content: flex-end;
-    justify-content: flex-end; }
-  /* line 42, ../sass/partials/_navigation.scss */
+    flex-direction: column; }
+    @media (min-width: 769px) {
+      /* line 49, ../sass/partials/_navigation.scss */
+      .menu nav {
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 1em; } }
+    @media (min-width: 1025px) {
+      /* line 49, ../sass/partials/_navigation.scss */
+      .menu nav {
+        margin-top: 0; } }
+  /* line 67, ../sass/partials/_navigation.scss */
   .menu a {
-    text-transform: capitalize; }
+    text-transform: capitalize;
+    display: block; }
+    @media (min-width: 769px) {
+      /* line 67, ../sass/partials/_navigation.scss */
+      .menu a {
+        margin: 0 1em; } }
+    @media (min-width: 1025px) {
+      /* line 67, ../sass/partials/_navigation.scss */
+      .menu a {
+        margin: 0; } }
 
 /* ==========================================================================
    Hero Image Section
    ========================================================================== */
 /* line 4, ../sass/partials/_hero-img.scss */
 .hero-img {
-  height: 800px;
+  height: 80vh;
   overflow: hidden;
   position: relative; }
   /* line 9, ../sass/partials/_hero-img.scss */
@@ -216,32 +214,25 @@ img {
    About Section
    ========================================================================== */
 /* line 4, ../sass/partials/_about.scss */
-.section {
+.row {
   padding: 5em 0 3em;
   border-bottom: 1px solid gray;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-direction: normal;
-  -webkit-box-orient: horizontal;
-  -moz-box-direction: normal;
-  -moz-box-orient: horizontal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-pack: justify;
-  -moz-box-pack: justify;
-  -ms-flex-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between; }
+  display: flex; }
+  /* line 9, ../sass/partials/_about.scss */
+  .row .image-block {
+    background-color: lightskyblue;
+    overflow: hidden;
+    margin-right: auto; }
+    /* line 15, ../sass/partials/_about.scss */
+    .row .image-block img {
+      width: 100%; }
+  /* line 20, ../sass/partials/_about.scss */
+  .row .content {
+    background-color: crimson;
+    padding: 1em 3em; }
 
-/* line 15, ../sass/partials/_about.scss */
-section:last-child > .section {
+/* line 29, ../sass/partials/_about.scss */
+section:last-child > .row {
   border: none; }
 
 /* ==========================================================================

@@ -1,18 +1,32 @@
 /* ==========================================================================
    About Section
    ========================================================================== */
-.section {
+.row {
     padding: 5em 0 3em;
     border-bottom: 1px solid gray;
-    @include flexbox;
-    @include flex-direction;
-    @include flex-wrap(wrap);
-    @include justify-content(space-between);
+    display: flex;
+
+    .image-block {
+        background-color: lightskyblue;
+        //border-radius: 10px;
+        overflow: hidden;
+        margin-right: auto;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .content {
+        background-color: crimson;
+        padding: 1em 3em;
+    }
+
 }
 
 section {
     &:last-child{
-        & > .section {
+        & > .row {
             border: none;
         }
     }
