@@ -106,7 +106,7 @@ body {
 
 /* line 104, ../sass/_base.scss */
 .container {
-  width: 1200px;
+  max-width: 1200px;
   margin: 0 auto; }
 
 /* line 109, ../sass/_base.scss */
@@ -137,11 +137,10 @@ img {
     font-weight: normal;
     letter-spacing: 0.15em;
     padding: 0.8em 1em;
-    border-bottom: 2px solid transparent;
     display: block; }
     /* line 28, ../sass/partials/_navigation.scss */
     .main-navigation a:hover {
-      border-bottom: 2px solid lightskyblue; }
+      background-color: lightskyblue; }
 
 /* line 35, ../sass/partials/_navigation.scss */
 .logo {
@@ -217,23 +216,83 @@ img {
 .row {
   padding: 5em 0 3em;
   border-bottom: 1px solid gray;
-  display: flex; }
-  /* line 9, ../sass/partials/_about.scss */
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap; }
+  @media (min-width: 769px) {
+    /* line 4, ../sass/partials/_about.scss */
+    .row {
+      flex-direction: row; } }
+  /* line 15, ../sass/partials/_about.scss */
   .row .image-block {
-    background-color: lightskyblue;
-    overflow: hidden;
-    margin-right: auto; }
-    /* line 15, ../sass/partials/_about.scss */
+    border-radius: 5px;
+    overflow: hidden; }
+    @media (min-width: 769px) {
+      /* line 15, ../sass/partials/_about.scss */
+      .row .image-block {
+        flex: 1; } }
+    /* line 25, ../sass/partials/_about.scss */
     .row .image-block img {
       width: 100%; }
-  /* line 20, ../sass/partials/_about.scss */
+    @media (min-width: 769px) {
+      /* line 29, ../sass/partials/_about.scss */
+      .row .image-block.right {
+        order: 1; } }
+  /* line 37, ../sass/partials/_about.scss */
   .row .content {
-    background-color: crimson;
     padding: 1em 3em; }
+    @media (min-width: 769px) {
+      /* line 37, ../sass/partials/_about.scss */
+      .row .content {
+        flex: 1; } }
+    /* line 45, ../sass/partials/_about.scss */
+    .row .content .sec-title {
+      font-size: 35px;
+      line-height: 35px;
+      text-transform: capitalize;
+      font-weight: normal;
+      letter-spacing: 5px;
+      word-spacing: 2px;
+      text-align: center;
+      margin: 1em 0 2em; }
+    /* line 56, ../sass/partials/_about.scss */
+    .row .content .sec-subtitle {
+      font-size: 18px;
+      line-height: 18px;
+      font-weight: normal;
+      letter-spacing: 5px;
+      word-spacing: 2px;
+      text-align: center;
+      margin: 1em 0 1.5em; }
+    /* line 66, ../sass/partials/_about.scss */
+    .row .content p {
+      font-size: 18px;
+      line-height: 26px; }
 
-/* line 29, ../sass/partials/_about.scss */
+/* line 77, ../sass/partials/_about.scss */
 section:last-child > .row {
   border: none; }
+
+/* ==========================================================================
+   Our Menu Section
+   ========================================================================== */
+/* line 6, ../sass/partials/_our-menu.scss */
+.menu-list li {
+  list-style: none;
+  margin-bottom: 3em; }
+  /* line 10, ../sass/partials/_our-menu.scss */
+  .menu-list li:last-child {
+    margin-bottom: 0; }
+  /* line 14, ../sass/partials/_our-menu.scss */
+  .menu-list li .title {
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: normal;
+    letter-spacing: 5px; }
+  /* line 21, ../sass/partials/_our-menu.scss */
+  .menu-list li .desc {
+    font-size: 16px;
+    line-height: 16px; }
 
 /* ==========================================================================
    Import helper classes

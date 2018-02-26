@@ -1,0 +1,26 @@
+/* ==========================================================================
+   Our Menu Section
+   ========================================================================== */
+
+   .menu-list {
+   		li {
+   			list-style: none;
+		    margin-bottom: 3em;
+
+		    &:last-child {
+	    	    margin-bottom: 0;
+		    }
+
+   			.title {
+   				font-size: 20px;
+   				line-height: 20px;
+   				font-weight: normal;
+   				letter-spacing: 5px;
+   			}
+
+   			.desc {
+				font-size: 16px;
+   				line-height: 16px;
+   			}
+   		}
+   }

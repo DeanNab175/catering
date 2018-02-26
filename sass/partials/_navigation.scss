@@ -22,12 +22,12 @@
 		font-weight: normal;
 		letter-spacing: 0.15em;
 		padding: 0.8em 1em;
-		border-bottom: 2px solid transparent;
+		//border-bottom: 2px solid transparent;
 		display: block;
 
 		&:hover {
-			//background-color: crimson;
-			border-bottom: 2px solid lightskyblue;
+			background-color: lightskyblue;
+			//border-bottom: 2px solid lightskyblue;
 		}
 	}
 }
