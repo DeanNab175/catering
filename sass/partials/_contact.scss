@@ -1,0 +1,30 @@
+/* ==========================================================================
+   Contact Section
+   ========================================================================== */
+
+   .info {
+   		display: flex;
+   		flex-direction: column;
+   		flex-wrap: wrap;
+
+   		@media(min-width: 769px) {
+   			flex-direction: row;
+   		}
+   }
+
+   .contact-info {
+   		flex: 1;
+   }
+
+   .contact-form {
+		flex: 1;
+
+   		input,
+   		textarea {
+   			display: block;
+			width: 100%;
+			margin: 1em 0;
+			padding: 1em;
+   		}
+
+   }

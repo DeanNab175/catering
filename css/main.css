@@ -260,6 +260,13 @@ section:last-child > .row {
       flex: 1;
       padding: 1em 3em; } }
   /* line 64, ../sass/partials/_about.scss */
+  .content.info-block {
+    margin: 0 2em; }
+    @media (min-width: 769px) {
+      /* line 64, ../sass/partials/_about.scss */
+      .content.info-block {
+        margin: 0; } }
+  /* line 72, ../sass/partials/_about.scss */
   .content .sec-title {
     font-size: 35px;
     line-height: 35px;
@@ -270,10 +277,10 @@ section:last-child > .row {
     text-align: center;
     margin: 0 0 1em; }
     @media (min-width: 1025px) {
-      /* line 64, ../sass/partials/_about.scss */
+      /* line 72, ../sass/partials/_about.scss */
       .content .sec-title {
         margin: 1em 0 2em; } }
-  /* line 79, ../sass/partials/_about.scss */
+  /* line 87, ../sass/partials/_about.scss */
   .content .sec-subtitle {
     font-size: 18px;
     line-height: 18px;
@@ -283,10 +290,10 @@ section:last-child > .row {
     text-align: center;
     margin: 0; }
     @media (min-width: 1025px) {
-      /* line 79, ../sass/partials/_about.scss */
+      /* line 87, ../sass/partials/_about.scss */
       .content .sec-subtitle {
         margin: 1em 0 1.5em; } }
-  /* line 93, ../sass/partials/_about.scss */
+  /* line 101, ../sass/partials/_about.scss */
   .content p {
     font-size: 18px;
     line-height: 26px; }
@@ -311,6 +318,34 @@ section:last-child > .row {
   .menu-list li .desc {
     font-size: 16px;
     line-height: 16px; }
+
+/* ==========================================================================
+   Contact Section
+   ========================================================================== */
+/* line 5, ../sass/partials/_contact.scss */
+.info {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap; }
+  @media (min-width: 769px) {
+    /* line 5, ../sass/partials/_contact.scss */
+    .info {
+      flex-direction: row; } }
+
+/* line 15, ../sass/partials/_contact.scss */
+.contact-info {
+  flex: 1; }
+
+/* line 19, ../sass/partials/_contact.scss */
+.contact-form {
+  flex: 1; }
+  /* line 22, ../sass/partials/_contact.scss */
+  .contact-form input,
+  .contact-form textarea {
+    display: block;
+    width: 100%;
+    margin: 1em 0;
+    padding: 1em; }
 
 /* ==========================================================================
    Import helper classes
