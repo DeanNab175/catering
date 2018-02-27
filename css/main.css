@@ -229,65 +229,67 @@ img {
     /* line 4, ../sass/partials/_about.scss */
     .row {
       margin: 0 auto; } }
-  /* line 20, ../sass/partials/_about.scss */
-  .row .image-block {
-    overflow: hidden;
-    border-radius: 10px; }
-    @media (min-width: 769px) {
-      /* line 20, ../sass/partials/_about.scss */
-      .row .image-block {
-        flex: 1; } }
-    /* line 30, ../sass/partials/_about.scss */
-    .row .image-block img {
-      width: 100%;
-      border-radius: 10px; }
-    @media (min-width: 769px) {
-      /* line 35, ../sass/partials/_about.scss */
-      .row .image-block.right {
-        order: 1; } }
-  /* line 43, ../sass/partials/_about.scss */
-  .row .content {
-    padding: 2em 0em; }
-    @media (min-width: 769px) {
-      /* line 43, ../sass/partials/_about.scss */
-      .row .content {
-        flex: 1;
-        padding: 1em 3em; } }
-    /* line 52, ../sass/partials/_about.scss */
-    .row .content .sec-title {
-      font-size: 35px;
-      line-height: 35px;
-      text-transform: capitalize;
-      font-weight: normal;
-      letter-spacing: 5px;
-      word-spacing: 2px;
-      text-align: center;
-      margin: 0 0 1em; }
-      @media (min-width: 1025px) {
-        /* line 52, ../sass/partials/_about.scss */
-        .row .content .sec-title {
-          margin: 1em 0 2em; } }
-    /* line 67, ../sass/partials/_about.scss */
-    .row .content .sec-subtitle {
-      font-size: 18px;
-      line-height: 18px;
-      font-weight: normal;
-      letter-spacing: 5px;
-      word-spacing: 2px;
-      text-align: center;
-      margin: 0; }
-      @media (min-width: 1025px) {
-        /* line 67, ../sass/partials/_about.scss */
-        .row .content .sec-subtitle {
-          margin: 1em 0 1.5em; } }
-    /* line 81, ../sass/partials/_about.scss */
-    .row .content p {
-      font-size: 18px;
-      line-height: 26px; }
 
-/* line 92, ../sass/partials/_about.scss */
+/* line 24, ../sass/partials/_about.scss */
 section:last-child > .row {
   border: none; }
+
+/* line 31, ../sass/partials/_about.scss */
+.image-block {
+  overflow: hidden;
+  border-radius: 10px; }
+  @media (min-width: 769px) {
+    /* line 31, ../sass/partials/_about.scss */
+    .image-block {
+      flex: 1; } }
+  /* line 41, ../sass/partials/_about.scss */
+  .image-block img {
+    width: 100%;
+    border-radius: 10px; }
+  @media (min-width: 769px) {
+    /* line 46, ../sass/partials/_about.scss */
+    .image-block.right {
+      order: 1; } }
+
+/* line 55, ../sass/partials/_about.scss */
+.content {
+  padding: 2em 0em; }
+  @media (min-width: 769px) {
+    /* line 55, ../sass/partials/_about.scss */
+    .content {
+      flex: 1;
+      padding: 1em 3em; } }
+  /* line 64, ../sass/partials/_about.scss */
+  .content .sec-title {
+    font-size: 35px;
+    line-height: 35px;
+    text-transform: capitalize;
+    font-weight: normal;
+    letter-spacing: 5px;
+    word-spacing: 2px;
+    text-align: center;
+    margin: 0 0 1em; }
+    @media (min-width: 1025px) {
+      /* line 64, ../sass/partials/_about.scss */
+      .content .sec-title {
+        margin: 1em 0 2em; } }
+  /* line 79, ../sass/partials/_about.scss */
+  .content .sec-subtitle {
+    font-size: 18px;
+    line-height: 18px;
+    font-weight: normal;
+    letter-spacing: 5px;
+    word-spacing: 2px;
+    text-align: center;
+    margin: 0; }
+    @media (min-width: 1025px) {
+      /* line 79, ../sass/partials/_about.scss */
+      .content .sec-subtitle {
+        margin: 1em 0 1.5em; } }
+  /* line 93, ../sass/partials/_about.scss */
+  .content p {
+    font-size: 18px;
+    line-height: 26px; }
 
 /* ==========================================================================
    Our Menu Section
