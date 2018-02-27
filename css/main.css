@@ -247,12 +247,13 @@ img {
         order: 1; } }
   /* line 43, ../sass/partials/_about.scss */
   .row .content {
-    padding: 1em 3em; }
+    padding: 2em 0em; }
     @media (min-width: 769px) {
       /* line 43, ../sass/partials/_about.scss */
       .row .content {
-        flex: 1; } }
-    /* line 51, ../sass/partials/_about.scss */
+        flex: 1;
+        padding: 1em 3em; } }
+    /* line 52, ../sass/partials/_about.scss */
     .row .content .sec-title {
       font-size: 35px;
       line-height: 35px;
@@ -263,10 +264,10 @@ img {
       text-align: center;
       margin: 0 0 1em; }
       @media (min-width: 1025px) {
-        /* line 51, ../sass/partials/_about.scss */
+        /* line 52, ../sass/partials/_about.scss */
         .row .content .sec-title {
           margin: 1em 0 2em; } }
-    /* line 66, ../sass/partials/_about.scss */
+    /* line 67, ../sass/partials/_about.scss */
     .row .content .sec-subtitle {
       font-size: 18px;
       line-height: 18px;
@@ -276,15 +277,15 @@ img {
       text-align: center;
       margin: 0; }
       @media (min-width: 1025px) {
-        /* line 66, ../sass/partials/_about.scss */
+        /* line 67, ../sass/partials/_about.scss */
         .row .content .sec-subtitle {
           margin: 1em 0 1.5em; } }
-    /* line 80, ../sass/partials/_about.scss */
+    /* line 81, ../sass/partials/_about.scss */
     .row .content p {
       font-size: 18px;
       line-height: 26px; }
 
-/* line 91, ../sass/partials/_about.scss */
+/* line 92, ../sass/partials/_about.scss */
 section:last-child > .row {
   border: none; }
 

@@ -42,10 +42,11 @@
 
     .content {
         //background-color: crimson;
-        padding: 1em 3em;
+        padding: 2em 0em;
 
         @media(min-width: 769px) {
             flex: 1;
+            padding: 1em 3em;
         }
 
         .sec-title {
