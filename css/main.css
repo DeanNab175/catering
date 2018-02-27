@@ -189,19 +189,20 @@ img {
    ========================================================================== */
 /* line 4, ../sass/partials/_hero-img.scss */
 .hero-img {
-  height: 80vh;
+  height: auto;
+  max-height: 80vh;
   overflow: hidden;
   position: relative; }
-  /* line 9, ../sass/partials/_hero-img.scss */
+  /* line 10, ../sass/partials/_hero-img.scss */
   .hero-img img {
     width: 100%;
     height: auto; }
-  /* line 14, ../sass/partials/_hero-img.scss */
+  /* line 15, ../sass/partials/_hero-img.scss */
   .hero-img .caption {
     position: absolute;
     bottom: 0;
-    left: 0; }
-    /* line 19, ../sass/partials/_hero-img.scss */
+    left: 2%; }
+    /* line 20, ../sass/partials/_hero-img.scss */
     .hero-img .caption h3 {
       font-size: 35px;
       line-height: 35px;
@@ -218,34 +219,40 @@ img {
   border-bottom: 1px solid gray;
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  margin: 0 2em; }
   @media (min-width: 769px) {
     /* line 4, ../sass/partials/_about.scss */
     .row {
       flex-direction: row; } }
-  /* line 15, ../sass/partials/_about.scss */
+  @media (min-width: 1200px) {
+    /* line 4, ../sass/partials/_about.scss */
+    .row {
+      margin: 0 auto; } }
+  /* line 20, ../sass/partials/_about.scss */
   .row .image-block {
-    border-radius: 5px;
-    overflow: hidden; }
+    overflow: hidden;
+    border-radius: 10px; }
     @media (min-width: 769px) {
-      /* line 15, ../sass/partials/_about.scss */
+      /* line 20, ../sass/partials/_about.scss */
       .row .image-block {
         flex: 1; } }
-    /* line 25, ../sass/partials/_about.scss */
+    /* line 30, ../sass/partials/_about.scss */
     .row .image-block img {
-      width: 100%; }
+      width: 100%;
+      border-radius: 10px; }
     @media (min-width: 769px) {
-      /* line 29, ../sass/partials/_about.scss */
+      /* line 35, ../sass/partials/_about.scss */
       .row .image-block.right {
         order: 1; } }
-  /* line 37, ../sass/partials/_about.scss */
+  /* line 43, ../sass/partials/_about.scss */
   .row .content {
     padding: 1em 3em; }
     @media (min-width: 769px) {
-      /* line 37, ../sass/partials/_about.scss */
+      /* line 43, ../sass/partials/_about.scss */
       .row .content {
         flex: 1; } }
-    /* line 45, ../sass/partials/_about.scss */
+    /* line 51, ../sass/partials/_about.scss */
     .row .content .sec-title {
       font-size: 35px;
       line-height: 35px;
@@ -254,8 +261,12 @@ img {
       letter-spacing: 5px;
       word-spacing: 2px;
       text-align: center;
-      margin: 1em 0 2em; }
-    /* line 56, ../sass/partials/_about.scss */
+      margin: 0 0 1em; }
+      @media (min-width: 1025px) {
+        /* line 51, ../sass/partials/_about.scss */
+        .row .content .sec-title {
+          margin: 1em 0 2em; } }
+    /* line 66, ../sass/partials/_about.scss */
     .row .content .sec-subtitle {
       font-size: 18px;
       line-height: 18px;
@@ -263,13 +274,17 @@ img {
       letter-spacing: 5px;
       word-spacing: 2px;
       text-align: center;
-      margin: 1em 0 1.5em; }
-    /* line 66, ../sass/partials/_about.scss */
+      margin: 0; }
+      @media (min-width: 1025px) {
+        /* line 66, ../sass/partials/_about.scss */
+        .row .content .sec-subtitle {
+          margin: 1em 0 1.5em; } }
+    /* line 80, ../sass/partials/_about.scss */
     .row .content p {
       font-size: 18px;
       line-height: 26px; }
 
-/* line 77, ../sass/partials/_about.scss */
+/* line 91, ../sass/partials/_about.scss */
 section:last-child > .row {
   border: none; }
 
