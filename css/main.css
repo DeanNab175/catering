@@ -334,18 +334,41 @@ section:last-child > .row {
 
 /* line 15, ../sass/partials/_contact.scss */
 .contact-info {
-  flex: 1; }
+  flex: 1;
+  padding: 1em; }
 
-/* line 19, ../sass/partials/_contact.scss */
+/* line 20, ../sass/partials/_contact.scss */
 .contact-form {
-  flex: 1; }
-  /* line 22, ../sass/partials/_contact.scss */
+  flex: 1;
+  padding: 1em; }
+  /* line 24, ../sass/partials/_contact.scss */
   .contact-form input,
   .contact-form textarea {
     display: block;
     width: 100%;
     margin: 1em 0;
     padding: 1em; }
+  /* line 32, ../sass/partials/_contact.scss */
+  .contact-form button {
+    background: lightgreen;
+    border: none;
+    padding: 1em;
+    border-radius: 10px;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 18px; }
+
+/* ==========================================================================
+   Footer Section
+   ========================================================================== */
+/* line 5, ../sass/partials/_footer.scss */
+footer {
+  background-color: #e6e6e6;
+  padding: 2em; }
+  /* line 9, ../sass/partials/_footer.scss */
+  footer p {
+    text-align: center; }
 
 /* ==========================================================================
    Import helper classes
