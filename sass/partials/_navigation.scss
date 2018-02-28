@@ -31,6 +31,7 @@
 }
 
 .logo {
+	@include flexbox;
 
 	@media(min-width: 1025px) {
 		margin-right: auto;
@@ -57,6 +58,23 @@
 .menu {
 	
 	@include align-self(center);
+	visibility: hidden;
+	opacity: 0;
+	max-height: 0;
+	@include transition(max-height 0.3s linear, opacity 0.3s ease-in-out);
+
+	&.open {
+		visibility: visible;
+		opacity: 1;
+		max-height: 100%;
+	}
+
+	@media(min-width: 769px) {
+		visibility: visible;
+		opacity: 1;
+		max-height: 100%;
+	}
+
 	nav {
 		text-align: center;
 		@include flexbox;
@@ -88,4 +106,51 @@
 			margin: 0;
 		}
 	}
+
+
+}
+
+.sticky {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 1;
+	box-shadow: 0 0 8px rgba($gray, 0.5);
+}
+
+#burger-menu {
+	@include align-self(center);
+	cursor: pointer;
+	display: block;
+	margin-left: 3em;
+
+	@media(min-width: 769px) {
+		display: none;
+	}
+
+	span.bar {
+	    display: block;
+	    width: 1.6em;
+	    height: 2px;
+	    background: $gray;
+	    margin: 0.4em 1em;
+	    @include transition(transform 0.3s ease-in-out, opacity 0.3s ease-in-out);
+	}
+
+	&.open {
+		span.bar {
+			background: $monza;
+			&:nth-child(1) {
+				transform: rotate(-45deg) translate(-12px, 0px);
+			}
+			&:nth-child(2) {
+				opacity: 0;
+			}
+			&:nth-child(3) {
+				transform: rotate(45deg) translate(-12px, 0px);
+			}
+		}
+	}
+
 }

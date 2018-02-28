@@ -99,6 +99,7 @@ textarea {
 html,
 body {
     font-family: $times-roman;
+    @include transition(margin-top 0.3s linear);
 }
 
 .container {

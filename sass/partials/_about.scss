@@ -3,8 +3,8 @@
    ========================================================================== */
 
 .row {
-    padding: 5em 0 3em;
-    border-bottom: 1px solid gray;
+    padding: 3em 0 0;
+    border-bottom: 1px solid #e0e0e0;
     @include flexbox;
     @include flex-direction(column);
     @include flex-wrap(wrap);
@@ -12,6 +12,7 @@
 
     @media(min-width: 769px) {
         @include flex-direction(row);
+        padding: 5em 0 3em;
     }
 
     @media(min-width: 1200px) {
@@ -63,14 +64,14 @@ section {
     }
 
     &.left {
-        @media(min-width: 1025px) {
+        @media(min-width: 769px) {
             padding-left: 0;
             padding-right: 3em;
         }
     }
 
     &.right {
-        @media(min-width: 1025px) {
+        @media(min-width: 769px) {
             padding-left: 3em;
             padding-right: 0;
         }
