@@ -2,18 +2,15 @@
    Main Navigation Section
    ========================================================================== */
 .main-navigation {
-	//@include flexbox;
-	//@include flex-direction;
-	//@include flex-wrap(wrap);
-	//@include justify-content(space-between);
-	display: flex;
-    flex-direction: column;
+	@include flexbox;
+	@include flex-direction(column);
+	background: $white;
 
     @media(min-width: 1025px) {
-		flex-direction: row;
+		@include flex-direction(row);
 	}
 
-	padding: 0.5em 20px;
+	padding: 0 20px;
 	a {
 		font-size: 16px;
 		line-height: 16px;
@@ -22,46 +19,61 @@
 		font-weight: normal;
 		letter-spacing: 0.15em;
 		padding: 0.8em 1em;
-		//border-bottom: 2px solid transparent;
 		display: block;
+		@include transition(background-color 0.3s ease-in-out, color 0.3s ease-in-out);
 
-		&:hover {
-			background-color: lightskyblue;
-			//border-bottom: 2px solid lightskyblue;
+		&:hover,
+		&:focus {
+			background-color: $atlantis;
+			color: $white;
 		}
 	}
 }
 
 .logo {
-	//margin-right: auto;
+
 	@media(min-width: 1025px) {
 		margin-right: auto;
 	}
-	align-self: center;
+
+	@include align-self(center);
+
 	h1 {
 		margin: 0;
+		a {
+			font-size: 18px;
+			line-height: 18px;
+			color: $black;
+
+			&:hover,
+			&:focus {
+				background-color: transparent;
+				color: $atlantis;
+			}
+		}
 	}
 }
 
 .menu {
-	//@include flex-grow;
-	align-self: center;
+	
+	@include align-self(center);
 	nav {
 		text-align: center;
-		display: flex;
-		flex-direction: column;
+		@include flexbox;
+		@include flex-direction(column);
+		margin-bottom: 0.3em;
 
 		@media(min-width: 769px) {
-			flex-direction: row;
-			justify-content: space-between;
-			margin-top: 1em;
+			@include flex-direction(row);
+			@include justify-content(space-between);
+			margin-top: 0.1em;
 		}
 
 		@media(min-width: 1025px) {
 			margin-top: 0;
+			margin-bottom: 0;
 		}
-		//@include flexbox;
-		//@include justify-content(flex-end);
+
 	}
 
 	a {
