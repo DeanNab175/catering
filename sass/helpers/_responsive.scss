@@ -1,0 +1,15 @@
+/* ======================================
+   Responsive
+   ====================================== */
+
+@mixin large {
+  @media only screen and (min-width: 1025px) {
+    @content;
+  }
+}
+
+@mixin medium {
+  @media only screen and (min-width: 769px) {
+    @content;
+  }
+}

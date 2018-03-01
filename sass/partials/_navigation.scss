@@ -1,12 +1,13 @@
-/* ==========================================================================
+/* ======================================
    Main Navigation Section
-   ========================================================================== */
+   ====================================== */
+
 .main-navigation {
 	@include flexbox;
 	@include flex-direction(column);
 	background: $white;
 
-    @media(min-width: 1025px) {
+	@include large {
 		@include flex-direction(row);
 	}
 
@@ -32,12 +33,12 @@
 
 .logo {
 	@include flexbox;
+	@include align-self(center);
 
-	@media(min-width: 1025px) {
+	@include large {
 		margin-right: auto;
 	}
 
-	@include align-self(center);
 
 	h1 {
 		margin: 0;
@@ -69,7 +70,7 @@
 		max-height: 100%;
 	}
 
-	@media(min-width: 769px) {
+	@include large {
 		visibility: visible;
 		opacity: 1;
 		max-height: 100%;
@@ -81,13 +82,13 @@
 		@include flex-direction(column);
 		margin-bottom: 0.3em;
 
-		@media(min-width: 769px) {
+		@include medium {
 			@include flex-direction(row);
 			@include justify-content(space-between);
 			margin-top: 0.1em;
 		}
 
-		@media(min-width: 1025px) {
+		@include large {
 			margin-top: 0;
 			margin-bottom: 0;
 		}
@@ -98,13 +99,15 @@
 		text-transform: capitalize;
 		display: block;
 
-		@media(min-width: 769px) {
+		@include medium {
 			margin: 0 1em;
 		}
 
-		@media(min-width: 1025px) {
+		@include large {
 			margin: 0;
 		}
+		
+
 	}
 
 
@@ -125,7 +128,7 @@
 	display: block;
 	margin-left: 3em;
 
-	@media(min-width: 769px) {
+	@include large {
 		display: none;
 	}
 
