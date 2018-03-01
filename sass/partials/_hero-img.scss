@@ -1,11 +1,14 @@
-/* ==========================================================================
+/* ======================================
    Hero Image Section
-   ========================================================================== */
+   ====================================== */
 .hero-img {
 	height: auto;
 	max-height: 80vh;
 	overflow: hidden;
-	position: relative;
+
+	.slide {
+		position: relative;
+	}
 
 	img {
 		width: 100%;
@@ -14,16 +17,68 @@
 
 	.caption {
 	  position: absolute;
-	  bottom: 0;
+	  top: 5%;
 	  left: 2%;
+	  background: rgba($atlantis, 0.6);
+	  padding: 0.7em;
+	  color: $white;
+
+	  @include medium {
+	  	left: 4%;
+	  	padding: 1.5em;
+	  }
 
 	  h3 {
-	  	font-size: 35px;
-		line-height: 35px;
+	  	@include font-size(24px);
+		line-height: 24px;
 		letter-spacing: 3px;
 		font-weight: normal;
 		word-spacing: 3px;
+		margin: 0;
+
+		@include medium {
+			@include font-size(35px);
+			line-height: 35px;
+		}
+
 	  }
 
+	}
+
+	&.flexslider {
+		border: none;
+		border-radius: 0;
+		margin-bottom: 0;
+	}
+
+}
+
+
+.flex-direction-nav {
+	a {
+		text-shadow: none;
+		&::before {
+			line-height: 40px;
+			color: rgba($monza, 0.8);
+			text-shadow: none;
+		}
+	}
+}
+
+.flex-control-nav {
+	bottom: 40px;
+}
+
+.flex-control-paging li {
+	a {
+		width: 15px;
+		height: 15px;
+		box-shadow: none;
+		background: $sushi;
+		border: 3px solid $white;
+
+		&.flex-active {
+			background: $monza;
+		}
 	}
 }

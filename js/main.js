@@ -4,24 +4,24 @@ const heroImg = document.querySelector('.hero-img');
 const menuBar = document.querySelector("#main-menu");
 const menuBarHeight = menuBar.offsetHeight;
 
+// listen to scroll event
+window.addEventListener('scroll', stickyMenu);
+
+// if the page vertical offset is
+// greater than the menu bar height
+// add the sticky class
+// else remove it
 function stickyMenu() {
 
 	if(window.pageYOffset >= menuBarHeight) {
-		//console.log("If:"+window.pageYOffset);
-		document.body.style.marginTop = menuBarHeight + 'px';
 		menuBar.classList.add('sticky');
-		
 	}
 	else {
-		//console.log("Else:"+window.pageYOffset);
-		document.body.style.marginTop = 0;
 		menuBar.classList.remove('sticky');
 		
 	}
 
 }
-
-window.addEventListener('scroll', stickyMenu);
 
 
 // Hide and show menu

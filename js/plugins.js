@@ -22,3 +22,10 @@
 }());
 
 // Place any jQuery/helper plugins in here.
+
+// Flexslider
+$(document).ready(function() {
+  $('.flexslider').flexslider({
+    animation: "slide"
+  });
+});

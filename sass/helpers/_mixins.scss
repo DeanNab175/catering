@@ -26,3 +26,48 @@
 }
 
 
+/* ===========================
+   Set a rem font size with
+   pixel fallback mixins
+   =========================== */
+@function calculateRem($size) {
+  $remSize: $size / 16px;
+  @return $remSize * 1rem;
+}
+
+@mixin font-size($size) {
+  font-size: $size;
+  font-size: calculateRem($size);
+}
+
+
+/* ===========================
+   Cross browser opacity
+   =========================== */
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity=$opacity-ie); //IE8
+}
+
+
+/* ===========================
+   Border Radius Mixin
+   =========================== */
+@mixin border-radius($radius: 0.5em) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
+
+
+/* ===========================
+   Box Shadow Mixin
+   =========================== */
+@mixin box-shadow($args...) {
+  -webkit-box-shadow:$args;
+  -moz-box-shadow:$args;
+  box-shadow:$args;
+}
+
+

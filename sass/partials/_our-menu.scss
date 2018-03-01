@@ -15,33 +15,23 @@ Our Menu Section
       }
 
 		.title {
-			font-size: 18px;
+			@include font-size(18px);
 			line-height: 18px;
 			font-weight: normal;
 			letter-spacing: 3px;
 
-        //  @media(min-width: 769px) {
-        //     font-size: 20px;
-        //     line-height: 20px;
-        // }
-
         @include medium {
-          font-size: 20px;
+          @include font-size(20px);
           line-height: 20px;
         }
 		}
 
       .desc {
-         font-size: 14px;
+         @include font-size(14px);
          line-height: 14px;
 
-        //  @media(min-width: 769px) {
-        //     font-size: 16px;
-        //     line-height: 16px;
-        // }
-
         @include medium {
-          font-size: 16px;
+          @include font-size(16px);
           line-height: 16px;
         }
 

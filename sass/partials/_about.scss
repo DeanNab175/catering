@@ -35,7 +35,7 @@ section {
 .image-block {
     
     overflow: hidden;
-    border-radius: 5px;
+    @include border-radius(5px);
     @include align-self(center);
 
     @include medium {
@@ -44,12 +44,13 @@ section {
     }
 
     img {
-        border-radius: 5px;
-        opacity: 0.75;
+        @include border-radius(5px);
+        @include opacity(0.75);
+        @include transition(opacity 0.3s ease-in-out);
 
         &:hover,
         &:focus {
-            opacity: 1;
+            @include opacity(1);
         }
     }
 
@@ -95,7 +96,7 @@ section {
     }
 
     .sec-title {
-        font-size: 30px;
+        @include font-size(30px);
         line-height: 30px;
         text-transform: capitalize;
         font-weight: normal;
@@ -106,7 +107,7 @@ section {
         color: $atlantis;
 
         @include medium {
-            font-size: 35px;
+            @include font-size(35px);
             line-height: 35px;
         }
 
@@ -116,7 +117,7 @@ section {
     }
 
     .sec-subtitle {
-        font-size: 16px;
+        @include font-size(16px);
         line-height: 16px;
         font-weight: normal;
         letter-spacing: 3px;
@@ -125,7 +126,7 @@ section {
         margin: 0;
 
         @include medium {
-            font-size: 18px;
+            @include font-size(18px);
             line-height: 18px;
         }
 
@@ -135,11 +136,11 @@ section {
     }
 
     p  {
-        font-size: 16px;
+        @include font-size(16px);
         line-height: 24px;
         
         @include medium {
-            font-size: 18px;
+            @include font-size(18px);
             line-height: 26px;
         }
     }

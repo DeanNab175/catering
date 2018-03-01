@@ -1,27 +1,36 @@
-/* ==========================================================================
+/* ======================================
    Contact Section
-   ========================================================================== */
+   ====================================== */   
 
 .info {
     @include flexbox;
     @include flex-direction(column);
     @include flex-wrap(wrap);
 
-	@media(min-width: 769px) {
-		@include flex-direction(row)
+	@include medium {
+		@include flex-direction(row);
 	}
 }
 
 .contact-info {
 	@include flex(1,1,0);
 	padding: 1em 0;
+
+	@include medium {
+		padding: 1em;
+	}
+
+	@include large {
+		padding: 1em 0;
+	}
+
 }
 
 .contact-form {
 	@include flex(1,1,0);
 	padding: 1em 0;
 
-	@media(min-width: 1025px) {
+	@include large {
 		padding: 1em;
 	}
 
@@ -55,7 +64,7 @@
 		border-radius: 10px;
 		color: $white;
 		text-transform: uppercase;
-		font-size: 14px;
+		@include font-size(14px);
 		line-height: 18px;
 		@include transition(background 0.3s ease-in-out);
 
