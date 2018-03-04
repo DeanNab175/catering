@@ -26,6 +26,8 @@
 // Flexslider
 $(document).ready(function() {
   $('.flexslider').flexslider({
-    animation: "slide"
+    animation: "slide",
+    slideshowSpeed: 5000,
+    animationSpeed: 1200
   });
 });
