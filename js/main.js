@@ -69,7 +69,7 @@ form.addEventListener("submit", function (event) {
 
 	for(let i = 0; i < inputs.length; i++) {
 
-		let message = createAnElement('b', inputs[i].name + ' is empty');
+		let message = createAnElement('span', inputs[i].name + ' is empty');
 		message.classList.add('message'); 
 
 		// skip the loop if the input are date or submit
@@ -79,13 +79,13 @@ form.addEventListener("submit", function (event) {
 
 		if( checkForEmpty(inputs[i].value) ) {
 			// check if the sibling element is
-			// a <b> tag by comparing its localName
-			if(inputs[i].nextSibling.localName !== "b") {
+			// a <span> tag by comparing its localName
+			if(inputs[i].nextSibling.localName !== "span") {
 				inputs[i].parentNode.insertBefore(message, inputs[i].nextSibling);
 			}
 
 		} else {
-			if(inputs[i].nextSibling.localName === "b") {
+			if(inputs[i].nextSibling.localName === "span") {
 				inputs[i].parentNode.removeChild(inputs[i].nextSibling);
 			}
 		}
