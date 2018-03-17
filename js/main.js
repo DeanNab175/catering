@@ -18,7 +18,7 @@ function stickyMenu() {
 	}
 	else {
 		menuBar.classList.remove('sticky');
-		
+
 	}
 
 }
@@ -47,7 +47,7 @@ function toggleMenu() {
 	else {
 		burgerMenu.classList.remove('open');
 	}
-	
+
 }
 
 
@@ -66,29 +66,54 @@ for(let i = 0; i < inputs.length; i++) {
 
 form.addEventListener("submit", function (event) {
 	event.preventDefault();
-
+	let count = 0;
 	for(let i = 0; i < inputs.length; i++) {
 
 		let message = createAnElement('span', inputs[i].name + ' is empty');
-		message.classList.add('message'); 
+		message.classList.add('message');
 
 		// skip the loop if the input are date or submit
 		if(inputs[i].name == 'date' || inputs[i].name == 'submit') {
 			continue;
 		}
 
+		// checks if the input are empty
 		if( checkForEmpty(inputs[i].value) ) {
-			// check if the sibling element is
-			// a <span> tag by comparing its localName
+
+			/* check if the sibling element is
+			   a <span> tag by comparing its localName
+			*/
+			// if the next element of the
+			// input is not a <span>
+			// then add one
 			if(inputs[i].nextSibling.localName !== "span") {
 				inputs[i].parentNode.insertBefore(message, inputs[i].nextSibling);
 			}
 
-		} else {
+		}
+		// check if the input are not empty
+		else {
+			// if the next element of the
+			// input is a <span>
+			// then removes it
 			if(inputs[i].nextSibling.localName === "span") {
 				inputs[i].parentNode.removeChild(inputs[i].nextSibling);
 			}
+
+			count++;
+
 		}
+
+	} // end for loop
+
+	/* check if count is the same as the number of
+	 * inputs minus the 2 skipped inputs
+	 * (the date and the submit button)
+	 * if it matches therefore none
+	 * of the inputs are empty
+	*/
+	if ( count === (inputs.length - 2) ) {
+		alert('Thanks! Your message has been sent successfully.');
 	}
 
 });
@@ -129,6 +154,3 @@ function createAnElement(element, text) {
 
 	return newEl;
 }
-
-
-
