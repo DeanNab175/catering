@@ -8,4 +8,4 @@ An HTML5 website template about Catering
 - Compass
 - Flexbox
 
-![Homepage Preview](https://github.com/DeanNab175/catering/blob/master/screenshot.png)
+![Homepage Preview](https://github.com/DeanNab175/catering/blob/master/screenshot.jpg)
