@@ -1,7 +1,7 @@
 # Catering
 An HTML5 website template about Catering
 
-## Technologies:
+### Technologies:
 - HTML5
 - CSS3
 - SASS
